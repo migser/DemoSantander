@@ -1,0 +1,16 @@
+.THIS { 
+	background-color: #eae7e3;
+}
+
+.THIS .titulo {
+    color: red;
+}
+
+.THIS .icono {
+    width: auto;
+    height: 24px;
+}
+
+.THIS a:link {
+    color: #798083;
+}

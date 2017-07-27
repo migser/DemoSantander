@@ -1,0 +1,62 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global" >
+  <!--
+    <ltng:require styles="/resource/slick_css,/resource/slick_theme"
+                  scripts="/resource/jquery3,/resource/slick_min" 
+                  afterScriptsLoaded="{!c.doInit}"/>
+
+    <ltng:require styles="/resource/slick/slick-1.6.0/slick/slick.css,/resource/slick/slick-1.6.0/slick/slick-theme.css"
+                  scripts="/resource/jquery3,/resource/slick/slick-1.6.0/slick/slick.min.js" 
+                  afterScriptsLoaded="{!c.doInit}"/>
+ -->   
+    <ltng:require styles="/resource/slick_css,/resource/slick_theme"	
+                  scripts="/resource/jquery_min,/resource/slick_min"
+        afterScriptsLoaded="{!c.doInit}"/>
+    
+    <aura:attribute name="posicion" type="Integer" />
+    <aura:attribute name="num" type="Integer" />
+    <aura:attribute name="selected" type="string" />
+    <div class="slds-grid slds-grid_align-start slds-m-left_x-large slds-m-bottom_small">
+    <div class="flechas" style="background-color: red; position:relative;"> </div>
+    </div>
+    <div id="flip" class="carrousel slds-m-horizontal--xx-small" >
+                <div onclick="{!c.despliega}" id="f1">
+      	 	 		<c:ProductSummary_mig titulo="CUENTAS" l1="5.000€" l2="4.500€" orden="1" icono="icono-cuentas.png" />
+             	 </div>
+              <div onclick="{!c.despliega}" id="{!2}" name="x">   
+      	 	 	<c:ProductSummary_mig titulo="PRESTAMOS" l1="-35.000€" l2="" orden="2" icono="icono-prestamos.png"/>
+              </div>
+      	 	 <div onclick="{!c.despliega}" id="f3">
+                <c:ProductSummary_mig titulo="TARJETAS" l1="3.200€" l2="1.500€" orden="3" icono="icono-tarjetas.png"/>
+                </div>
+                <div onclick="{!c.despliega}" id="f1">
+      	 	 		<c:ProductSummary_mig titulo="FONDOS" l1="5.000€" l2="4.500€" orden="4" icono="icono-fondos.png"/>
+             	 </div>
+              <div onclick="{!c.despliega}" id="{!2}" name="x">   
+      	 	 	<c:ProductSummary_mig titulo="DÉBITO" l1="-35.000€" l2="" orden="5" icono="icono-tarjetas.png"/>
+              </div>
+      	 	 <div onclick="{!c.despliega}" id="f3">
+                <c:ProductSummary_mig titulo="SEGUROS" l1="3.200€" l2="1.500€" orden="6" icono="icono-cuentas.png"/>
+                </div>
+           
+                <div onclick="{!c.despliega}" id="f1">
+      	 	 		<c:ProductSummary_mig titulo="AHORRO" l1="5.000€" l2="4.500€" orden="7" icono="icono-cuentas.png" />
+             	 </div>
+           
+              <div onclick="{!c.despliega}" id="{!2}" name="x">   
+      	 	 	<c:ProductSummary_mig titulo="HIPOTECAS" l1="-35.000€" l2="" orden="8" icono="icono-prestamos.png"/>
+              </div>
+        
+      	 	 <div onclick="{!c.despliega}" id="f3">
+                <c:ProductSummary_mig titulo="CARTERA" l1="3.200€" l2="1.500€" orden="9" icono="icono-prestamos.png"/>
+                </div>
+       
+    </div>
+    <div id="panel" class="slds-grid slds-wrap slds-m-horizontal--x-small"><!--
+        <div class="flecha" style="{!'left: '+v.posicion+'px;'}" aura:id="flecha" id="flecha" ></div>
+-->
+    	<div class="slds-p-around--small slds-size--1-of-1 slds-theme--shade" style="background-color: #eae7e3;">
+            <c:detalleProducto_mig titulo="{!v.selected}" />
+        </div>
+    </div>
+
+</aura:component>

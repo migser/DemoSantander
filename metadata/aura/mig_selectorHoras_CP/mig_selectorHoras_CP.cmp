@@ -1,0 +1,17 @@
+<aura:component controller="Cita_Ctrl">
+	<aura:attribute name="gestor" type="User" />  
+    <aura:attribute name="fecha" type="Date" />     
+    <aura:attribute name="horas" type="Object[]"  />  
+    <aura:attribute name="texto" type="User" /> 
+    <aura:attribute name="asunto" type="String" /> 
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler name="change" value="{!v.gestor}" action="{!c.doInit}"/>
+    <aura:handler name="change" value="{!v.fecha}" action="{!c.doInit}"/>
+    <aura:if isTrue="{!v.horas.length  >0}" >
+	    <ui:inputTextArea aura:id="Asunto" label="Notas" value="{!v.texto}" rows="5"/>
+        </aura:if>
+    <aura:iteration items="{!v.horas}" var="hora" indexVar="i">
+    	<c:mig_botonCita_CP hora="{!hora}" dia="{!v.fecha}" gestor="{!v.gestor}" texto="{!v.texto}" asunto="{!v.asunto}"/>
+    </aura:iteration>
+</aura:component>

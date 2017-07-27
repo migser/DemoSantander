@@ -1,0 +1,42 @@
+<aura:component >
+    <aura:attribute name="titulo" type="string" />
+    <aura:attribute name="interes" type="string" />
+    <aura:attribute name="saldo" type="string" />
+    <aura:attribute name="plazo" type="string" />
+    
+	<div  class="slds-col--padded slds-grid--vertical-align-center slds-grid--align-center slds-p-top--x-small slds-p-bottom--x-small slds-theme--shade"  >             
+            	<div class="slds-grid slds-grid_vertical-align-center slds-grid_align-center" >
+                    <div class="slds-col slds-m-right_xx-small">
+                    	<img  src="{!'/resource/santanderimg/'+'icono-prestamos.png'}" class="slds-align_absolute-center icono" /> 
+                    </div>
+            		<div class="slds-col" style="color:red;">
+                        {!v.titulo}
+                    </div> 
+            	</div>
+        
+                <div   class="slds-grid_vertical slds-m-top--x-small slds-grid--vertical-align-center slds-grid--horizontal-align-start slds-text-heading--xx-small" >
+             
+                    <div class="slds-grid">        
+        				<div class="slds-truncate" title="Cloudhub">Importe:</div>
+                        <div  class="slds-col_bump-left">{!v.saldo}</div>           
+        			</div>
+                    <div class="slds-grid">        
+        				<div class="slds-truncate" title="Cloudhub">Plazo:</div>
+                        <div  class="slds-col_bump-left">{!v.plazo}</div>           
+        			</div>
+                    <div class="slds-grid">        
+        				<div class="slds-truncate" title="Cloudhub">Interés:</div>
+                        <div  class="slds-col_bump-left">{!v.interes}</div>           
+        			</div>
+                    <div class="slds-grid">        
+        				<div class="slds-truncate" title="Cloudhub"><a href="javascript:void(0);">Contratar Seguro</a></div>
+                        <div  class="slds-col_bump-left"><a href="javascript:void(0);"><img src="/resource/santanderimg/red-arrow.png" class="slds-align_end" style="max-height:12px;" /></a></div>           
+        			</div>
+                    <div class="slds-grid">        
+        				<div class="slds-truncate" title="Cloudhub"><a href="javascript:void(0);">Ver Detalles</a></div>
+                        <div  class="slds-col_bump-left"><a href="javascript:void(0);"><img src="/resource/santanderimg/red-arrow.png" class="slds-align_end" style="max-height:12px;" /></a></div>           
+        			</div>
+                           
+                </div>
+            </div>
+</aura:component>

@@ -1,0 +1,24 @@
+<aura:component >
+    <aura:attribute name="titulo" type="string" />
+    <aura:attribute name="l1" type="string" />
+    <aura:attribute name="l2" type="string" />
+    <aura:attribute name="icono" type="string" />
+     <aura:attribute name="orden" type="Integer" />
+    
+	<div id="{!v.orden}" class="slds-col--padded slds-grid--vertical-align-center slds-grid--align-center slds-p-top--x-small slds-p-bottom--x-small slds-theme--shade"  aura:id="section1" >
+            <div id="{!v.orden}"  class="slds-m-top--xx-smallslds-grid--vertical-align-center slds-grid--align-center" style="justify-content: center;">
+        	<img id="{!v.orden}" src="{!'/resource/santanderimg/'+v.icono}" class="slds-align_absolute-center icono" /> 
+        	</div>
+        	<div id="{!v.orden}" class="slds-grid slds-grid--vertical-align-center slds-grid--align-center slds-text-align--center slds-text-heading--large" style="color:red;" aura:id="titulo" >
+                
+                {!v.titulo}
+            </div>
+        <div id="{!v.orden}" class="slds-m-top--x-small" aura:id="separador" ></div>
+            <div  id="{!v.orden}" class="slds-grid slds-m-top--x-small slds-grid--vertical-align-center slds-grid--align-center slds-text-heading--medium slds-text-align--center" aura:id="texto" >
+                <div id="{!v.orden}" stye="vertical-align: bottom;">
+                    <p id="{!v.orden}"> {!v.l1} </p>
+                    <p id="{!v.orden}"> {!v.l2}</p>                    
+                </div>        
+            </div>
+        </div>
+</aura:component>

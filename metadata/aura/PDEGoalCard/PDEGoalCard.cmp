@@ -1,0 +1,93 @@
+<aura:component controller="PDEGoalCardCtrl" implements="force:recordTab,force:hasRecordId">
+<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+<!--<aura:handler event="force:showToast" action="{!c.handleSave}"/> -->
+<ltng:require styles="/resource/PDE_SLDS100/assets/styles/salesforce-lightning-design-system-ltng.css" />	
+
+
+<aura:attribute name="GoalName" type="String" default="Sample Goal Name"/>
+<aura:attribute name="Status" type="String" default="In Progress" />
+<aura:attribute name="Description" type="String" default="Sample Description"/>        
+<aura:attribute name="Percentage" type="Integer" description="Progress" default="50" />
+<aura:attribute name="TargetValue" type="Integer" default="100000" />
+<aura:attribute name="ActualValue" type="Integer" default="50000"/>    
+<aura:attribute name="TargetDate" type="Date" default="2017-01-01" />    
+<aura:attribute name="CurrencySymbol" type="String" default="€" />
+
+<aura:attribute name="GoalId" type="String"/>
+    
+<div class="slds">    
+<div class="slds-card slds-theme--default slds-text-body--regular slds-p-left--medium" id="goalDetail" >
+   <header class="slds-media--center slds-grid slds-p-top--medium" >
+      <div class="slds-media__figure" >
+         <span  class="">
+            <c:PDE_SVG class="slds-icon slds-icon-standard-goals" svgId="" xlinkHref="/resource/PDE_SLDS100/assets/icons/standard-sprite/svg/symbols.svg#goals" /> 
+         </span>
+      </div>
+      <div class="slds-media__body" >
+         <h5 class="slds-text-heading--medium slds-media--rec-home__title slds-truncate" ><a href="" >{!v.GoalName}</a><span class="slds-badge slds-align-middle slds-m-left--medium wm-pill-color" >{!v.Status}</span></h5>
+         <span class="color-grey" ></span>
+      </div>
+      <div class="slds-col slds-no-flex slds-p-right--small slds-align-top" >
+     
+               <div class="slds-dropdown-trigger slds-dropdown-trigger--click slds-is-open" aria-expanded="true">
+            <button class="slds-button slds-button--icon-border-filled" aria-haspopup="true" onclick="{!c.displayEditMenu}">
+            
+              <c:PDE_SVG class="slds-button__icon slds-button__icon--hint" svgId="" xlinkHref="/resource/PDE_SLDS100/assets/icons/utility-sprite/svg/symbols.svg#down" /> 
+              
+            </button>
+            <div class="classHidden" aura:id="EditMenu">       
+                <div class="slds-dropdown slds-dropdown--left">
+                  <ul class="dropdown__list" role="menu">
+                    <li class="slds-dropdown__item">
+                      <a href="" role="menuitem" onclick="{!c.editRecord}">
+                        <p class="slds-truncate">Edit</p>
+                      </a>
+                    </li>
+                    <li class="slds-dropdown__item">
+                      <a href="" role="menuitem" onclick="{!c.deleteAction}">
+                        <p class="slds-truncate">Delete</p>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+            </div>       
+          </div>
+       
+       </div>
+   </header>
+   <section class="slds-card__body" >
+      <div class="slds-grid slds-wrap slds-p-left--x-large" >
+         <div class="slds-col slds-size--1-of-2 slds-medium-size--5-of-6 slds-large-size--9-of-12" >
+            <div class="slds-grid slds-col--padded slds-p-top--small" ><span >{!v.Description}</span></div>
+            <div class="slds-grid slds-wrap slds-grid--align-spread slds-p-vertical--large" >
+               <div class="slds-col--padded" id="targetDate" >
+                  <ul >
+                     <li ><span class="slds-text-heading--label" >Target Value</span></li>
+                     <li ><span class="positiveNumber uiOutputCurrency" >{!v.CurrencySymbol}&nbsp; <ui:outputNumber value="{!v.TargetValue}"/></span></li>
+                  </ul>
+               </div>
+               <div class="slds-col--padded" id="targetDate" >
+                  <ul >
+                     <li ><span class="slds-text-heading--label" >Actual Value</span></li>
+                     <li ><span class="positiveNumber uiOutputCurrency" >{!v.CurrencySymbol}&nbsp; <ui:outputNumber value="{!v.ActualValue}"/></span></li>
+                  </ul>
+               </div>
+               <div class="slds-col--padded" id="targetDate" >
+                  <ul >
+                     <li ><span class="slds-text-heading--label" >Target Date</span></li>
+                     <li ><span  class=""><ui:outputDate aura:id="oDate" value="{!v.TargetDate}"/></span></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <div class="slds-col-padded slds-size--1-of-2 slds-medium-size--1-of-6 slds-large-size--3-of-12 slds-p-bottom--medium slds-p-left--xx-large" id="goalDial" >
+            <div>
+                <c:PDEDonutChart size="100" percentage="{!v.Percentage}"  /> 
+            </div>
+         </div>
+      </div>
+   </section>
+</div>
+</div>     
+    
+</aura:component>

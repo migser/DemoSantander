@@ -1,0 +1,37 @@
+<aura:component >
+	<aura:attribute name="titulo" type="string" />
+ 
+<aura:if isTrue="{!v.titulo == '1'}">     
+    <lightning:layout horizontalAlign="{!v.aligment}" multipleRows="true" class="contenedor">
+      <lightning:layoutItem flexibility="no-flex" padding="around-x-small">         
+          <c:detalleCuenta_mig titulo="Cuenta Clásica" numero="ES98***23334" fecha="12/05/2009" saldo="2.000€" />
+      </lightning:layoutItem>
+      <lightning:layoutItem flexibility="no-flex" padding="around-xx-small">         
+      	  <c:detalleCuenta_mig titulo="Cuenta Día a Día" numero="ES83***88938" fecha="01/06/2013" saldo="22.300€" />	 	  	
+      </lightning:layoutItem>
+      <lightning:layoutItem flexibility="no-flex" padding="around-xx-small">         
+         <c:detalleCuenta_mig titulo="Cuenta Clásica" numero="ES32***22114" fecha="27/07/1997" saldo="8.020€" />
+      </lightning:layoutItem>
+    </lightning:layout>
+</aura:if>
+<aura:if isTrue="{!v.titulo == '2'}">     
+    <lightning:layout horizontalAlign="{!v.aligment}" multipleRows="true" class="contenedor">
+      <lightning:layoutItem flexibility="no-flex" padding="around-x-small">         
+          <c:detallePrestamo_mig titulo="Préstamo Personal" interes="6.25%" plazo="6 Años" saldo="25.000€" />
+      </lightning:layoutItem>
+      <lightning:layoutItem flexibility="no-flex" padding="around-xx-small">         
+      	  <c:detallePrestamo_mig titulo="Préstamo Coche" interes="5.25%" plazo="8 Años" saldo="45.000€" />
+      </lightning:layoutItem>
+    </lightning:layout>
+</aura:if>
+<aura:if isTrue="{!v.titulo == '3'}">     
+    <lightning:layout horizontalAlign="{!v.aligment}" multipleRows="true" class="contenedor">
+      <lightning:layoutItem flexibility="no-flex" padding="around-x-small">         
+          <c:detalleTarjeta_mig titulo="Tarjeta Crédito Día a Día" limite="6.000€" extracto="0€" activacion="23/08/2004" numero="7200***9988" />
+      </lightning:layoutItem>
+      <lightning:layoutItem flexibility="no-flex" padding="around-xx-small">         
+      	  <c:detalleTarjeta_mig titulo="Tarjeta Iberia Sendo" limite="6.000€" extracto="133,45€" activacion="01/11/2002" numero="7200***2112"/>
+      </lightning:layoutItem>
+    </lightning:layout>
+</aura:if>
+</aura:component>

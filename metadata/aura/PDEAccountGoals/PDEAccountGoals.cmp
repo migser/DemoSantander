@@ -1,0 +1,36 @@
+<aura:component controller="PDEAccountGoalCtrl" implements="flexipage:availableForAllPageTypes,force:recordTab,force:hasRecordId">
+<aura:handler name="init" value="{!this}" action="{!c.loadRecords}"/>
+<aura:handler event="force:showToast" action="{!c.loadRecords}"/>  
+<aura:attribute name="AG" type="AccountGoal__c[]"/>   
+<ltng:require styles="/resource/PDE_SLDS100/assets/styles/salesforce-lightning-design-system-ltng.css" />	
+    
+<div>    
+    
+<div class="slds-card slds-theme--default slds-text-body--regular"  >
+   <header class="slds-card__header slds-grid slds-grid--align-spread slds-p-around--x-small" >
+      <div class="slds-media slds-media--center slds-has-flexi-truncate" >
+         <div class="slds-media__body" >
+            <h3 class="slds-p-left--medium slds-text-heading--medium slds-truncate" >Goals Summary</h3>
+         </div>
+         <div class="slds-no-flex" >
+            <div class="slds-button-group" id="newGoalButton" >
+                <button class="slds-button slds-button--neutral slds-button--small" onclick="{!c.createRecord}">&nbsp;New&nbsp;
+                </button>
+             </div>
+         </div>
+      </div>
+   </header>
+</div>    
+    
+<aura:iteration items="{!v.AG}" var="item">
+    <span>
+    <div style="margin-top:1rem;">
+    <c:PDEGoalCard GoalName="{!item.Name}" Status="{!item.Status__c}" Description="{!item.Description__c}"
+                   Percentage="{!item.Progress__c}" TargetValue="{!item.TargetValue__c}" ActualValue="{!item.ActualValue__c}"
+                   TargetDate="{!item.TargetDate__c}" CurrencySymbol="€" GoalId="{!item.Id}"/>
+    </div>
+	</span>
+</aura:iteration>
+</div>
+   
+</aura:component>

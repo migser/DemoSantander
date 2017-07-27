@@ -1,0 +1,18 @@
+<aura:component controller="Cita_Ctrl" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    
+  <aura:attribute name="gestor" type="String" />  
+  <aura:attribute name="fecha" type="Date" />
+  <aura:attribute name="resultado" type="String" />  
+    
+  <aura:handler name="AsignaGestor" event="c:mig_AsignaGestor_CP" action="{!c.asignagestor}"/> 
+  <aura:handler name="citaCreada" event="c:mig_citaCreada_CP" action="{!c.citacreada}"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+ <!-- <c:mig_buscar_CP /> -->
+     
+  <c:mig_infoGestor_CP gestor="{!v.gestor}"/>
+    
+  <ui:inputDate aura:id="dateField" label="Día" value="{!v.fecha}" displayDatePicker="true" langLocale="es" />
+  <c:mig_selectorHoras_CP gestor="{!v.gestor}" fecha="{!v.fecha}" asunto="{!v.recordId}"/>
+
+</aura:component>

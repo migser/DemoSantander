@@ -1,0 +1,51 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <lightning:layout horizontalAlign="Start" multipleRows="true" class="contenedor">
+        	
+            	<lightning:layoutItem flexibility="no-flex" padding="around-small">                	
+       
+       
+       
+      
+    <div class="slds-col slds-grid--vertical-align-center slds-grid--align-center  blanco large-fix"   >
+            <div class="slds-grid slds-p-around--xx-small slds-grid--vertical-align-center slds-grid--align-center slds-text-align--center  slds-text-heading--medium titulo"  >
+                CUMPLE
+            </div>
+         <div class="slds-grid slds-m-top--xx-small slds-grid--vertical-align-center slds-grid--align-center slds-text-heading--small slds-text-align--center">
+        		<img src="/resource/logo123"  />
+        </div>
+            <div class="slds-grid slds-m-top--xx-small slds-grid--vertical-align-center slds-grid--align-center slds-text-heading--small slds-text-align--center">
+                
+                     Interés 25,60€
+                </div>        
+            <div class="slds-grid slds-m-top--xx-small slds-grid--vertical-align-center slds-grid--align-center slds-text-heading--small slds-text-align--center">
+                     Recibos 10,02€
+                </div>        
+            <div class="slds-grid slds-m-top--xx-small slds-grid--vertical-align-center slds-grid--align-center slds-text-heading--small slds-text-align--center">
+                     Acciones 0
+                </div>        
+            
+        </div>
+                         	</lightning:layoutItem>
+        <lightning:layoutItem flexibility="no-flex" padding="around-small">           
+    <div class="slds-col slds-grid--vertical-align-center slds-grid--align-center  blanco large-fix"   >
+            <div class="slds-grid slds-p-around--xx-small slds-grid--vertical-align-center slds-grid--align-center slds-text-align--center  slds-text-heading--medium titulo"  >
+                VINCULADO
+            </div>
+         <div class="slds-grid slds-m-top--xx-small slds-grid--vertical-align-center slds-grid--align-center slds-text-heading--small slds-text-align--center">
+        		<img src="/resource/estrellas"  />
+        </div>
+            <div class="slds-grid slds-m-top--xx-small slds-grid--vertical-align-center slds-grid--align-center slds-text-heading--small slds-text-align--center">
+                
+                     Cumple Servicios
+                </div>        
+            <div class="slds-grid slds-m-top--xx-small slds-grid--vertical-align-center slds-grid--align-center slds-text-heading--small slds-text-align--center">
+                     Cumple Productos
+                </div>      
+            
+        </div>
+        </lightning:layoutItem>
+        <lightning:layoutItem flexibility="no-flex" padding="around-small" class="slds-size_1-of-3">
+            <c:riesgos_cmp />
+        </lightning:layoutItem>
+          </lightning:layout>
+</aura:component>

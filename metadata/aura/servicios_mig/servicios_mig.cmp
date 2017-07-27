@@ -1,0 +1,82 @@
+<aura:component >
+    <div class="slds-text-heading--small">Servicios</div>
+	<table class="slds-table slds-table_bordered slds-table_cell-buffer">
+  <tbody>
+    <tr>
+      <th scope="row" data-label="Opportunity Name" class="cabecera">
+        <div class="slds-truncate" title="Cloudhub">
+          <a href="javascript:void(0);"></a>
+        </div>
+      </th>
+      <td data-label="Account Name">
+      <div class="slds-grid"> 
+          <div>
+          	<img src="/resource/santanderimg/tick.png" class="slds-align_start slds-m-right--small" style="max-height:19px;" />
+              </div>
+        	<div class="slds-truncate" title="Cloudhub">Cobros</div>
+          </div>
+      </td>
+    
+
+    </tr>
+    <tr>
+      <th scope="row" data-label="Opportunity Name" class="cabecera">
+        <div class="slds-truncate" title="Cloudhub + Anypoint Connectors">
+          <a href="javascript:void(0);"></a>
+        </div>
+      </th>
+      <td data-label="Account Name">
+      <div class="slds-grid"> 
+          <div>
+          	<img src="/resource/santanderimg/tick.png" class="slds-align_start slds-m-right--small" style="max-height:19px;" />
+              </div>
+        	<div class="slds-truncate" title="Cloudhub">Pagos</div>
+          </div>
+      </td>
+    </tr>
+        <tr>
+      <th scope="row" data-label="Opportunity Name" class="cabecera">
+        <div class="slds-truncate" title="Cloudhub + Anypoint Connectors">
+          <a href="javascript:void(0);"></a>
+        </div>
+      </th>
+      <td data-label="Account Name">
+      <div class="slds-grid"> 
+          <div>
+          	<img src="/resource/santanderimg/tick.png" class="slds-align_start slds-m-right--small" style="max-height:19px;" />
+              </div>
+        	<div class="slds-truncate" title="Cloudhub">Tarjetas</div>
+          </div>
+      </td>
+       
+    </tr>
+        <tr>
+      <th scope="row" data-label="Opportunity Name" class="cabecera">
+        <div class="slds-truncate" title="Cloudhub + Anypoint Connectors">
+          <a href="javascript:void(0);"></a>
+        </div>
+      </th>
+      <td data-label="Account Name">
+      <div class="slds-grid"> 
+          <div>
+          	<img src="/resource/santanderimg/tick.png" class="slds-align_start slds-m-right--small" style="max-height:19px;" />
+              </div>
+        	<div class="slds-truncate" title="Cloudhub">Recibos</div>
+          </div>
+      </td>
+    </tr>
+        <tr>
+      <th scope="row" data-label="Opportunity Name" class="cabecera" >
+      	<img src="/resource/santanderimg/icono-tr.png" class="slds-align_absolute-center" style="height:15%;" /> 
+      </th>
+      <td data-label="Account Name">
+  		<div class="slds-grid">        
+        	<div class="slds-truncate" title="Cloudhub">Transaccionalidad</div>
+          	<div  class="slds-col_bump-left"><img src="/resource/santanderimg/red-arrow.png" class="slds-align_end" style="max-height:19px;" /></div>
+            
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</aura:component>

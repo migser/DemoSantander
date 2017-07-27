@@ -1,0 +1,40 @@
+<aura:component >
+    <lightning:tabset >
+        <lightning:tab label="Riesgos">
+           <table class="slds-table slds-table_bordered slds-table_cell-buffer" style="background-color: #f2f2f2;">
+  <tbody>
+    <tr>
+      <th scope="row" data-label="Opportunity Name" class="cabecera">
+        <div class="slds-truncate" title="Cloudhub">
+          CIRBE
+        </div>
+      </th>
+      <td data-label="Account Name">
+      	<div class="slds-truncate" title="Cloudhub"></div>
+ 	  </td>
+      <td data-label="Account Name">
+      	<div class="slds-truncate" title="Cloudhub">100%</div>
+ 	  </td>
+    </tr>
+    
+      <tr>
+      <th scope="row" data-label="Opportunity Name" class="cabecera">
+        <div class="slds-truncate" title="Cloudhub">
+          TRIAD
+        </div>
+      </th>
+      <td data-label="Account Name">
+      	<div class="slds-truncate" title="Cloudhub">15 JUL 2015</div>
+ 	  </td>
+      <td data-label="Account Name">
+      	<div class="slds-truncate" title="Cloudhub">Val. Muy Bueno</div>
+ 	  </td>
+    </tr>
+  </tbody>
+</table>
+        </lightning:tab>
+        <lightning:tab label="Inversiones">
+            Sample Content Two
+        </lightning:tab>
+    </lightning:tabset>
+</aura:component>

@@ -1,0 +1,9 @@
+.THIS {
+}
+.THIS .cabecera {
+    background-color: #c9baab;
+    border: solid;
+    border-width: 1px;
+    border-color: #e0d8d1;
+    padding-left:0.5rem !important;
+}

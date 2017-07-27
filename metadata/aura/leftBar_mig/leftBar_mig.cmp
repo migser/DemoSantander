@@ -1,0 +1,5 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <div style="border-color: red;border-style: none;border-width:2px;height:85vh;" class="slds-align_absolute-center">
+    	<img src="/resource/santanderimg/lateral-izda3.jpg" class="lateral" /> 
+    </div>
+</aura:component>

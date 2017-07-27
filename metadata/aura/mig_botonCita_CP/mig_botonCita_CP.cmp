@@ -1,0 +1,11 @@
+<aura:component controller="Cita_Ctrl">
+    <aura:attribute name="hora" type="Object" />
+    <aura:attribute name="dia" type="Date" />
+    <aura:attribute name="gestor" type="User" />
+    <aura:attribute name="texto" type="String" default="" />
+    <aura:attribute name="asunto" type="String"  />
+    
+    <aura:registerEvent name="citaCreada" type="c:mig_citaCreada_CP" />    
+	 <lightning:button variant="brand" label="{!v.hora.texto}" disabled="{!v.hora.ocupada}" onclick="{! c.creacita }" class="boton" />
+
+</aura:component>

@@ -1,0 +1,27 @@
+<aura:component >
+	<aura:attribute name="gestor" type="User"/>  
+    <div class="slds-grid slds-wrap slds-grid_pull-padded">
+  		<div class="slds-p-horizontal_small slds-size_1-of-1 slds-align_absolute-center slds-text-heading_large slds-text-title_caps slds-m-vertical_medium"
+             style="font-size: 20px">
+            Pide Cita con tu gestor personal
+        </div>
+		<div class="slds-p-horizontal_small slds-size_1-of-1 slds-grid slds-wrap slds-grid_pull-padded slds-grid_align-center" >
+       		<div class="slds-p-horizontal_small slds-size_2-of-9 slds-m-top_x-small">
+      	      	<img src="{!v.gestor.SmallPhotoUrl }" />
+       		 </div>
+        
+        	<div class="slds-p-horizontal_small slds-size_3-of-9">
+            	
+            	 	<div class="slds-p-horizontal_small slds-size_1-of-1 slds-text-heading_small" id="{!i}">{!v.gestor.Name}</div>
+                    <div class="slds-p-horizontal_small slds-size_1-of-1 slds-text-heading_x-small" >Gestor Banca Personal</div>
+                     <div class="slds-p-horizontal_small slds-size_1-of-1 slds-text-heading_x-small" >+34 91 888 1231</div>
+                     <div class="slds-p-horizontal_small slds-size_1-of-1 slds-text-heading_x-small" ><a href="" >miguel@santander.es</a></div>
+            	
+        	</div>
+        	<div class="slds-p-horizontal_small slds-size_3-of-9">
+            	<img src="/resource/santanderimg/mapa.png" style="width: 60%"/>
+        </div>
+            </div>
+    </div>
+      
+</aura:component>
